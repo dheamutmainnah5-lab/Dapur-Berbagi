@@ -1,0 +1,197 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7f0;
+    color: #333;
+}
+
+/* NAVBAR */
+header {
+    background: #315c45;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e9c99d;
+}
+
+/* BERANDA */
+.hero {
+    min-height: 450px;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: #e8f0e6;
+}
+
+.hero div {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #315c45;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.hero img {
+    width: 45%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.tombol, button {
+    background: #315c45;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, .tombol:hover {
+    background: #244632;
+}
+
+/* BAGIAN UMUM */
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #315c45;
+    margin-bottom: 20px;
+}
+
+.tentang p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* PILIHAN PERAN */
+.pilihan, .daftar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.kartu {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+    width: 300px;
+}
+
+.kartu h3 {
+    color: #315c45;
+    margin-bottom: 15px;
+}
+
+.kartu p {
+    margin-bottom: 18px;
+}
+
+/* FORM */
+.form-section {
+    display: none;
+    background: #e8f0e6;
+}
+
+form {
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* MAKANAN */
+.makanan-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#makanan {
+    background: #f0f3eb;
+}
+
+/* FOOTER */
+footer {
+    background: #315c45;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    line-height: 1.8;
+}
+
+/* TAMPILAN LAPTOP DAN HP */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}

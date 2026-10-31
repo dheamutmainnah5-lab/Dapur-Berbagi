@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Berbagi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <h2>Dapur Berbagi</h2>
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#peran">Bergabung</a>
+            <a href="#makanan">Makanan</a>
+        </nav>
+    </header>
+
+    <!-- BERANDA -->
+    <section id="beranda" class="hero">
+        <div>
+            <h1>Berbagi Makanan,<br>Menebarkan Kebaikan</h1>
+            <p>
+                Mari berbagi makanan kepada sesama.
+                Karena makanan yang kita bagikan dapat
+                membawa kebahagiaan bagi orang lain.
+            </p>
+            <a href="#peran" class="tombol">Mulai Berbagi</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=700"
+             alt="Makanan">
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="tentang">
+        <h2>Tentang Dapur Berbagi</h2>
+        <p>
+            Dapur Berbagi merupakan website yang mempertemukan
+            orang yang ingin memberikan makanan dengan orang
+            yang membutuhkan. Melalui website ini, kita dapat
+            mengurangi makanan terbuang dan membantu sesama.
+        </p>
+    </section>
+
+    <!-- PILIH PERAN -->
+    <section id="peran" class="peran">
+        <h2>Bergabung Bersama Kami</h2>
+        <p>Pilih peran Anda untuk mulai menggunakan Dapur Berbagi.</p>
+
+        <div class="pilihan">
+            <div class="kartu">
+                <h3>🍱 Pemberi</h3>
+                <p>Saya ingin menyumbangkan makanan.</p>
+                <button onclick="tampilPemberi()">Pilih Sebagai Pemberi</button>
+            </div>
+
+            <div class="kartu">
+                <h3>🤝 Penerima</h3>
+                <p>Saya ingin mendapatkan makanan.</p>
+                <button onclick="tampilPenerima()">Pilih Sebagai Penerima</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM PEMBERI -->
+    <section id="formPemberi" class="form-section">
+        <h2>Formulir Pemberi Makanan</h2>
+
+        <form onsubmit="kirimPemberi(event)">
+            <input type="text" id="namaPemberi" placeholder="Nama Pemberi" required>
+            <input type="text" id="namaMakanan" placeholder="Nama Makanan" required>
+            <input type="number" id="jumlahMakanan" placeholder="Jumlah Makanan" min="1" required>
+            <input type="text" id="lokasiPemberi" placeholder="Lokasi Pengambilan" required>
+            <input type="tel" id="waPemberi" placeholder="Nomor WhatsApp" required>
+            <button type="submit">Kirim Data Makanan</button>
+        </form>
+        <p id="pesanPemberi"></p>
+    </section>
+
+    <!-- FORM PENERIMA -->
+    <section id="formPenerima" class="form-section">
+        <h2>Formulir Penerima Makanan</h2>
+
+        <form onsubmit="kirimPenerima(event)">
+            <input type="text" id="namaPenerima" placeholder="Nama Penerima" required>
+            <input type="text" id="alamatPenerima" placeholder="Alamat Penerima" required>
+            <select id="pilihanMakanan" required>
+                <option value="">Pilih Makanan</option>
+            </select>
+            <input type="number" id="jumlahPenerima" placeholder="Jumlah yang Dibutuhkan" min="1" required>
+            <input type="tel" id="waPenerima" placeholder="Nomor WhatsApp" required>
+            <button type="submit">Kirim Permintaan</button>
+        </form>
+        <p id="pesanPenerima"></p>
+    </section>
+
+    <!-- DAFTAR MAKANAN -->
+    <section id="makanan" class="makanan">
+        <h2>Makanan yang Tersedia</h2>
+        <p>Berikut daftar makanan yang dapat dipilih oleh penerima.</p>
+
+        <div id="daftarMakanan" class="daftar">
+            <div class="kartu makanan-card">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" alt="Nasi kotak">
+                <h3>Nasi Kotak</h3>
+                <p>Jumlah: 10 kotak</p>
+                <p>Lokasi: Makassar</p>
+            </div>
+
+            <div class="kartu makanan-card">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500" alt="Paket sayur">
+                <h3>Paket Sayur</h3>
+                <p>Jumlah: 5 paket</p>
+                <p>Lokasi: Makassar</p>
+            </div>
+
+            <div class="kartu makanan-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" alt="Makanan">
+                <h3>Makanan Siap Saji</h3>
+                <p>Jumlah: 8 porsi</p>
+                <p>Lokasi: Makassar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>Dapur Berbagi</h3>
+        <p>Berbagi dengan sepenuh hati.</p>
+        <p>&copy; 2026 Dapur Berbagi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
